@@ -1,0 +1,35 @@
+<div class="login-box" ng-controller="AuthCtrl as auth">
+    <div class="login-logo"><b> Primeira</b> APP</div>
+    <div class="login-box-body">
+        <p class="login-box-msg">Bem vindo!</p>
+        <form>
+            <auth-field id="authName" model="auth.user.name" type="input"
+                placeholder="Informe o Nome" hide="auth.loginMode"></auth-field>
+            <auth-field id="authEmail" model="auth.user.email" type="email"
+                placeholder="Informe o E-mail"></auth-field>
+            <auth-field id="authPass" model="auth.user.password" type="password"
+                placeholder="Informe a Senha"></auth-field>
+            <auth-field id="authConfirmPass" model="auth.user.confirm_password" type="password"
+                placeholder="Confirme a Senha" hide="auth.loginMode"></auth-field>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button class="btn btn-primary btn-block btn-flat"
+                        ng-click="auth.login()" ng-show="auth.loginMode">Entrar</button>
+                    <button class="btn btn-primary btn-block btn-flat"
+                        ng-click="auth.signup()" ng-hide="auth.loginMode">Registrar</button>                    
+                </div>
+            </div>
+        </form>
+        <br />
+        <a href="javascript:;" ng-click="auth.changeMode()">
+            {{ auth.loginMode ? 
+                'Novo usuário? Registrar aqui!' :
+                'Já é cadastrado? Entrar aqui!' }}
+        </a>
+    </div>
+</div>
+
+<style>
+    html, .wrapper { background-color: #fff!important; }
+    .login-box-body { background-color: #eee; }
+</style>

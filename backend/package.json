@@ -10,9 +10,11 @@
   "author": "Leonardo Leitão",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-query-int": "^1.0.1",
+    "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.2",
     "mongoose": "^4.7.0",
     "mongoose-paginate": "^5.0.3",
